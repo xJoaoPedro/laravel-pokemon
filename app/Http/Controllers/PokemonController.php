@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pokemon;
+use App\Models\Trainer;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class PokemonController extends Controller
 {
@@ -15,25 +17,42 @@ class PokemonController extends Controller
 
     public function create()
     {
-        return view('pokemons.create');
+        $trainers = Trainer::all();
+        return view('pokemons.create', compact('trainers'));
     }
 
     public function store(Request $request)
     {
-        Pokemon::create($request->all());
+        $image = $request->file('image')->store('images', 'public');
+        Pokemon::create([
+            'name' => $request->name,
+            'type' => $request->type,
+            'power_points' => $request->power_points,
+            'trainer_id' => $request->trainer_id,
+            'image' => $image
+        ]);
         return redirect('pokemons')->with('success', 'Pokemon created successfully.');
     }
 
     public function edit($id)
     {
         $pokemon = Pokemon::findOrFail($id);
-        return view('pokemons.edit', compact('pokemon'));
+        $trainers = Trainer::all();
+        return view('pokemons.edit', compact(['pokemon', 'trainers']));
     }
 
     public function update(Request $request, $id)
     {
         $pokemon = Pokemon::findOrFail($id);
-        $pokemon->update($request->all());
+        $image = $request->file('image')->store('images', 'public');
+        $pokemon->update([
+            'name' => $request->name,
+            'type' => $request->type,
+            'power_points' => $request->power_points,
+            'trainer_id' => $request->trainer_id,
+            'image' => $image
+        ]);
+        
         return redirect('pokemons')->with('success', 'Pokemon updated successfully.');
     }
 

@@ -1,6 +1,6 @@
 @vite('resources/css/app.css')
 
-<div class="grid grid-cols-4 gap-4 mt-12 mx-12">
+<div class="grid grid-cols-3 gap-4 mt-12 mx-12">
     @foreach($trainers as $trainer)
     <div class="relative flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
         <div class="absolute top-4 right-5">

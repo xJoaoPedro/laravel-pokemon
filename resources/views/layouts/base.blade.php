@@ -18,10 +18,39 @@
         </style>
     @endif
 </head>
-<body class="bg-gray-100 w-screen h-screen">
+<body class="bg-gray-100 w-full h-screen relative flex flex-col">
 
+    <nav class="flex items-center justify-between flex-wrap bg-red-600 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="54" height="54" class="fill-current h-8 w-8 mr-2">
+            <!-- Contorno da Pokébola -->
+            <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="4" />
+            
+            <!-- Linha divisória -->
+            <line x1="10" y1="50" x2="90" y2="50" stroke="white" stroke-width="4" />
+            
+            <!-- Botão central -->
+            <circle cx="50" cy="50" r="10" fill="white" />
+            <circle cx="50" cy="50" r="6" fill="none" stroke="white" stroke-width="2" />
+            </svg>
 
-    <div>
+            <span class="font-semibold text-xl tracking-tight"> @yield('title_nav') </span>
+        </div>
+        <div class="block lg:flex lg:items-center lg:w-auto">
+            <div class="text-sm lg:flex-grow">
+                <a href="{{ url('pokemon') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                    Pokemon
+                </a>
+                <a href="{{ url('coaches') }}" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                    Coach
+                </a>
+            </div>
+            <div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="h-full flex">
         @yield('content')
     </div>
 </body>

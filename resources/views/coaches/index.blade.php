@@ -3,6 +3,8 @@
 @section('title_nav', 'Coaches')
 
 @section('content')
+
+@can('create', App\Models\Coach::class)
 <div class="absolute bottom-10 right-10">
     <a
         class="inline-block rounded-full bg-red-600 px-3 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none active:bg-red-500"
@@ -13,6 +15,8 @@
         </svg>
     </a>
 </div>
+@endcan
+
 
 <div class="w-full grid grid-cols-4 auto-rows-[200px] gap-10 mt-12 mx-12">
 

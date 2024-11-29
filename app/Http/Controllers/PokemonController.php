@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Coach;
 use App\Models\Pokemon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 
 class PokemonController extends Controller
@@ -12,7 +13,8 @@ class PokemonController extends Controller
     public function index()
     {
         $pokemon = Pokemon::all();
-        return view('pokemon.index', compact('pokemon'));
+        $user = Auth::user();
+        return view('pokemon.index', compact(['pokemon', 'user']));
     }
 
     public function create()
@@ -57,7 +59,7 @@ class PokemonController extends Controller
     public function update(Request $request, $id)
     {
         $pokemon = Pokemon::findOrFail($id);
-        
+
         if(!is_null($request->image)) {
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('images'), $imageName);

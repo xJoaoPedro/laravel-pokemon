@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Coach;
 use App\Models\Pokemon;
+use App\Policies\CoachPolicy;
 use App\Policies\PokemonPolicy;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
@@ -23,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::policy(Pokemon::class, PokemonPolicy::class);
+        Gate::policy(Coach::class, CoachPolicy::class);
     }
 }

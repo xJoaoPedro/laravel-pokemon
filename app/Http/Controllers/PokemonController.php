@@ -16,11 +16,12 @@ class PokemonController extends Controller
         $user = Auth::user();
         return view('pokemon.index', compact(['pokemon', 'user']));
     }
-
+    
     public function create()
     {
+        $user = Auth::user();
         Gate::authorize('create', Pokemon::class);
-
+        
         $coaches = Coach::all();
         return view('pokemon.create', compact('coaches'));
     }

@@ -3,23 +3,19 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Pokemon extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         'name',
         'type',
-        'power_points',
+        'power',
         'image',
-        'trainer_id'
+        'coach_id'
     ];
 
-    public function trainer(): BelongsTo
+    public function coach()
     {
-        return $this->belongsTo(Trainer::class);
+        return $this->belongsTo(Coach::class);
     }
 }

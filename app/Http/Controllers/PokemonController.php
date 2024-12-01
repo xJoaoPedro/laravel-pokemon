@@ -2,64 +2,85 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Coach;
 use App\Models\Pokemon;
-use App\Models\Trainer;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class PokemonController extends Controller
 {
     public function index()
     {
-        $pokemons = Pokemon::all();
-        return view('pokemons.index', compact('pokemons'));
+        $pokemon = Pokemon::all();
+        $user = Auth::user();
+        return view('pokemon.index', compact(['pokemon', 'user']));
     }
 
     public function create()
     {
-        $trainers = Trainer::all();
-        return view('pokemons.create', compact('trainers'));
+        Gate::authorize('create', Pokemon::class);
+
+        $coaches = Coach::all();
+        return view('pokemon.create', compact('coaches'));
     }
 
     public function store(Request $request)
     {
-        $image = $request->file('image')->store('images', 'public');
-        Pokemon::create([
-            'name' => $request->name,
-            'type' => $request->type,
-            'power_points' => $request->power_points,
-            'trainer_id' => $request->trainer_id,
-            'image' => $image
+        $request->validate([
+            'name' => 'required',
+            'type' => 'required',
+            'power' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp',
         ]);
-        return redirect('pokemons')->with('success', 'Pokemon created successfully.');
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('images'), $imageName);
+
+        $pokemon = new Pokemon();
+        $pokemon->name = $request->name;
+        $pokemon->type = $request->type;
+        $pokemon->power = $request->power;
+        $pokemon->coach_id = $request->coach_id;
+        $pokemon->image = 'images/'.$imageName;
+        $pokemon->save();
+
+        return redirect('pokemon')->with('success', 'Pokemon created successfully.');
     }
 
     public function edit($id)
     {
+        Gate::authorize('edit', Pokemon::class);
+
         $pokemon = Pokemon::findOrFail($id);
-        $trainers = Trainer::all();
-        return view('pokemons.edit', compact(['pokemon', 'trainers']));
+        $coaches = Coach::all();
+        return view('pokemon.edit', compact(['pokemon', 'coaches']));
     }
 
     public function update(Request $request, $id)
     {
         $pokemon = Pokemon::findOrFail($id);
-        $image = $request->file('image')->store('images', 'public');
-        $pokemon->update([
-            'name' => $request->name,
-            'type' => $request->type,
-            'power_points' => $request->power_points,
-            'trainer_id' => $request->trainer_id,
-            'image' => $image
-        ]);
-        
-        return redirect('pokemons')->with('success', 'Pokemon updated successfully.');
+
+        if(!is_null($request->image)) {
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+            $pokemon->image = 'images/'.$imageName;
+        }
+
+        $pokemon->name = $request->name;
+        $pokemon->type = $request->type;
+        $pokemon->power = $request->power;
+        $pokemon->coach_id = $request->coach_id;
+        $pokemon->save();
+
+        return redirect('pokemon')->with('success', 'Pokemon updated successfully.');
     }
 
     public function destroy($id)
     {
+        Gate::authorize('destroy', Pokemon::class);
+
         $pokemon = Pokemon::findOrFail($id);
         $pokemon->delete();
-        return redirect('pokemons')->with('success', 'Pokemon deleted successfully.');
+        return redirect('pokemon')->with('success', 'Pokemon deleted successfully.');
     }
 }

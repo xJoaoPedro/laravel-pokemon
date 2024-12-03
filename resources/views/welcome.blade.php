@@ -15,7 +15,7 @@
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @else
-    <style>
+    <style> 
         /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
         *,
         ::after,
@@ -906,8 +906,8 @@
     @endif
 </head>
 
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+<body class="font-sans antialiased">
+    <div class="bg-gray-50 text-black/50">
         <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
         <div class="relative h-screen flex flex-col items-center selection:bg-[#FF2D20] selection:text-white">
             <header class="w-3/4 h-1/6 grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
@@ -931,20 +931,20 @@
                     @auth
                     <a
                         href="{{ url('/dashboard') }}"
-                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
                         Dashboard
                     </a>
                     @else
                     <a
                         href="{{ route('login') }}"
-                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
                         Log in
                     </a>
 
                     @if (Route::has('register'))
                     <a
                         href="{{ route('register') }}"
-                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
                         Register
                     </a>
                     @endif
@@ -960,7 +960,7 @@
                         href="{{ url('pokemon') }}"
                         id="docs-card"
                         style="background-image: url('https://wallpapers.com/images/high/pokemon-pictures-u0ycff1698mf8i1a.webp');"
-                        class="bg-cover bg-center w-1/2 m-5 overflow-hidden rounded-lg shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 hover:ring-4 focus:outline-none focus-visible:ring-[#FF2D20] dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
+                        class="bg-cover bg-center w-1/2 m-5 overflow-hidden rounded-lg shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 hover:ring-4 focus:outline-none focus-visible:ring-[#FF2D20]">
                         <div class="relative p-6 h-full flex items-center gap-6 bg-gradient-to-t from-gray-100 from-15% lg:items-end">
                             <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
                                 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
@@ -970,7 +970,7 @@
                                 </div>
 
                                 <div class="pt-3 sm:pt-5 lg:pt-0">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Pokemon</h2>
+                                    <h2 class="text-xl font-semibold text-black">Pokemon</h2>
 
                                     <p class="mt-4 text-sm/relaxed">
                                         Pokémon is an exciting and vast world. Our CRUD system allows users to easily manage their Pokémon collection, simplifying the way to create, view details, update or delete their Pokemon from the system.
@@ -988,15 +988,15 @@
                     <div class="w-1/2 h-full p-5 flex flex-col justify-between">
                         <a
                             href="{{ url('coaches') }}"
-                            style="background-image: url('https://themagicrain.com/wp-content/uploads/2017/10/pokemontrainers.jpg.pagespeed.ce_.Rzhnk-VRja-1024x576.jpg');"
-                            class="flex h-3/5 items-end bg-cover bg-end rounded-lg bg-white shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none hover:ring-4 focus-visible:ring-[#FF2D20] dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                            <div class="relative p-6 h-full flex items-center gap-6 rounded-lg bg-gradient-to-t from-gray-100 from-35% lg:items-end">
+                            style="background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2024/01/_1-every-pok-mon-protagonist-s-official-name.jpg?q=70&fit=crop&w=1140&h=&dpr=1');"
+                            class="flex h-3/5 items-end bg-cover bg-end rounded-lg bg-white shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none hover:ring-4 focus-visible:ring-[#FF2D20]">
+                            <div class="relative p-6 h-full w-full flex items-center justify-between gap-6 rounded-lg bg-gradient-to-t from-gray-100 from-35% lg:items-end">
                                 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xmlns:bx="https://boxy-svg.com" width="40px" height="40px"><defs><bx:export><bx:file format="svg" path="Sem título.svg"/><bx:file format="html" path="Sem título.html"/></bx:export></defs><path style="fill: rgb(109, 64, 68);" d="M 421.705 333.054 L 346.274 353.484 C 346.274 353.484 369.846 355.342 397.191 366.486 C 397.191 366.486 440.38 379.918 496.011 366.915 C 496.011 366.915 466.02 342.341 421.705 333.054 Z"/><path style="stroke: red; stroke-width: 6px; fill: none;" d="M 400.862 302.503 C 400.862 302.503 337.761 267.118 191.828 331.529 C 170.433 338.931 57.616 375.072 3.978 333.983 C 3.978 333.983 -23.158 94.118 190.497 94.404 L 190.497 94.386 C 190.739 94.386 190.972 94.396 191.212 94.396 C 191.667 94.4 192.099 94.381 192.555 94.386 L 192.555 94.419 C 363.555 95.567 395.281 237.755 400.862 302.503 Z"/><g transform="matrix(1.276109, 0, 0, 1.256868, -85.257996, -41.33633)"><path style="fill: red" d="M208.295,113.202l-3.802-4.525c-32.675,27.434-51.199,70.552-53.574,124.694 c-1.782,40.684,6.221,73.747,6.304,74.077l5.737-1.413C162.647,304.753,132.263,177.041,208.295,113.202z"/><path style="stroke-width: 3.94792px; stroke: red; fill: red;" d="M 287.666 135.08 C 259.027 112.864 231.759 107.281 230.612 107.055 C 230.612 107.055 210.916 105.994 203.23 110.961 C 132.619 156.598 139.148 295.957 155.293 307.14 C 174.116 320.178 350.968 266.104 350.968 266.104 C 346.701 196.297 314.075 155.567 287.666 135.08 Z"/></g><path style="stroke: red; stroke-width: 5px; fill: red;" d="M 306.671 294.978 C 259.528 303.336 77.548 353.484 77.548 353.484 C 77.548 353.484 124.692 427.776 215.211 428.707 C 215.211 428.707 247.269 433.351 301.956 385.991 C 301.956 385.991 411.175 309.296 484.805 361.224 L 400.959 297.764 C 400.959 297.763 353.814 286.62 306.671 294.978 Z M 484.805 361.223 L 490.533 365.558 C 488.654 364.013 486.738 362.584 484.805 361.223 Z"/><path style="fill: red;" d="M 190.696 71.168 C 177.676 71.168 167.123 81.354 167.123 93.921 C 167.123 106.486 214.266 106.486 214.266 93.921 C 214.268 81.354 203.713 71.168 190.696 71.168 Z"/><g transform="matrix(0.95515, 0, 0, 1, 8.703419, 1.908997)"><ellipse style="stroke-dashoffset: 19px; stroke-miterlimit: 25.97; fill: rgb(255, 255, 255);" cx="227.453" cy="213.319" rx="58.011" ry="56.236"/><ellipse style="stroke-dashoffset: 19px; stroke-miterlimit: 25.97; fill: red" cx="228.378" cy="211.297" rx="22.76" ry="22.508"/><ellipse style="stroke-dashoffset: 19px; stroke-miterlimit: 25.97; fill: rgb(255, 255, 255);" cx="228.024" cy="211.225" rx="14.79" ry="14.665"/><rect x="244.597" y="202.623" width="59.208" height="17.206" style="fill: red"/><rect x="151.482" y="202.876" width="59.208" height="17.206" style="fill: red"/></g></svg>
                                 </div>
 
                                 <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Coaches</h2>
+                                    <h2 class="text-xl font-semibold text-black">Coaches</h2>
 
                                     <p class="mt-4 text-sm/relaxed">
                                         Here you can create, read, udate and delete your Pokemon Coaches, Mastering strategies, building a strong team and defeating opponents to become a true Pokémon Champion.
@@ -1010,23 +1010,23 @@
                         </a>
 
                         <a
-                            href="{{ url('coaches') }}"
-                            style="background-image: url('https://themagicrain.com/wp-content/uploads/2017/10/pokemontrainers.jpg.pagespeed.ce_.Rzhnk-VRja-1024x576.jpg');"
-                            class="flex h-2/6 items-end bg-cover bg-end rounded-lg bg-white shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 hover:ring-4 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                            <div class="relative p-6 h-full flex items-center gap-6 rounded-lg bg-gradient-to-t from-gray-100 from-35% lg:items-end">
+                            href="{{ url('dashboard') }}"
+                            style="background-image: url('https://img.freepik.com/free-vector/realistic-technology-particle-background_23-2148409680.jpg?t=st=1733189979~exp=1733193579~hmac=795a62a4235912dc2795b26c2536a48a2949ca5e36b7c46d88f2ed05cce6e6cf&w=1380');"
+                            class="flex h-2/6 items-end bg-cover bg-end rounded-lg bg-white shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 hover:ring-4 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20]">
+                            <div class="relative p-6 h-full w-full flex items-center justify-between gap-6 rounded-lg bg-gradient-to-t from-gray-100 from-35% lg:items-end">
                                 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <svg width="35px" height="35px" viewBox="0 0 20.00 20.00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ff0000" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>profile_favorite [#ff0000]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke-width="0.0002" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -2199.000000)" fill="#ff0000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M22.6446428,2043.90844 C22.4684473,2044.08303 22.3882684,2044.33387 22.4298427,2044.57969 L22.6961156,2046.15397 C22.7792641,2046.64461 22.3942076,2047.04294 21.9586681,2047.04294 C21.8438441,2047.04294 21.7250606,2047.01485 21.6102366,2046.95364 L20.2155204,2046.21015 C20.1066355,2046.15196 19.9868622,2046.12286 19.8670888,2046.12286 C19.7473155,2046.12286 19.628532,2046.15196 19.5186572,2046.21015 L18.1239411,2046.95364 C18.009117,2047.01485 17.8903335,2047.04294 17.7755095,2047.04294 C17.33997,2047.04294 16.9559034,2046.64461 17.038062,2046.15397 L17.3053248,2044.57969 C17.3468991,2044.33387 17.2657304,2044.08303 17.0895348,2043.90844 L15.9610917,2042.79371 C15.5166434,2042.35424 15.7621293,2041.58968 16.375844,2041.49937 L17.9358672,2041.2696 C18.1793734,2041.23449 18.3902141,2041.07896 18.4990989,2040.85521 L19.1959621,2039.42242 C19.333553,2039.14047 19.6008158,2039 19.8670888,2039 C20.1343517,2039 20.4006247,2039.14047 20.5382155,2039.42242 L21.2360686,2040.85521 C21.3449534,2041.07896 21.5548043,2041.23449 21.7993003,2041.2696 L23.3583336,2041.49937 C23.9720483,2041.58968 24.2175342,2042.35424 23.773086,2042.79371 L22.6446428,2043.90844 Z M11.8927571,2050.87478 C11.8779091,2050.87478 11.8650409,2050.87277 11.850193,2050.87277 C11.8363349,2050.87277 11.8224768,2050.87478 11.8086188,2050.87478 C10.7365978,2050.8517 9.87046813,2049.96373 9.87046813,2048.87207 C9.87046813,2047.76536 10.7583747,2046.86535 11.850193,2046.86535 C12.9420113,2046.86535 13.8299179,2047.76536 13.8299179,2048.87207 C13.8299179,2049.96373 12.9637882,2050.8517 11.8927571,2050.87478 L11.8927571,2050.87478 Z M14.8455167,2051.46977 C15.6671025,2050.49852 16.0630475,2049.14699 15.6364168,2047.6851 C15.2434414,2046.33758 14.1248969,2045.27301 12.7717549,2044.96398 C10.1842545,2044.373 7.89074327,2046.35062 7.89074327,2048.87207 C7.89074327,2049.86841 8.26194168,2050.76742 8.85486928,2051.46977 C6.29805462,2052.52732 4.4093971,2054.98354 4.00949268,2057.86319 C3.92634423,2058.46421 4.40048834,2059 4.99836525,2059 C5.48834715,2059 5.90210965,2058.63578 5.97041015,2058.14413 C6.37922334,2055.22736 8.83804161,2052.90257 11.8086188,2052.8815 C11.8224768,2052.8815 11.8363349,2052.88552 11.850193,2052.88552 C11.8650409,2052.88552 11.8779091,2052.8815 11.8927571,2052.8815 C14.8623444,2052.90257 17.3221525,2055.22736 17.7299758,2058.14514 C17.7992662,2058.63578 18.2130287,2059 18.7020207,2059 L18.7030106,2059 C19.3008875,2059 19.7740417,2058.46421 19.6908933,2057.8642 C19.2919787,2054.98354 17.4023314,2052.52932 14.8455167,2051.46977 L14.8455167,2051.46977 Z" id="profile_favorite-[#ff0000]"> </path> </g> </g> </g> </g></svg>
                                         <g fill="#FF2D20">
                                             <path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z" />
                                         </g>
                                     </svg>
                                 </div>
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Coaches</h2>
+                                <div class="pt-3 sm:pt-5 flex-grow">
+                                    <h2 class="text-xl font-semibold text-black">Profile</h2>
 
                                     <p class="mt-4 text-sm/relaxed">
-                                        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAam and defeating opponents to become a true Pokémon Champion.
+                                        Here you can view and edit your profile informations.
                                     </p>
                                 </div>
 
@@ -1044,7 +1044,7 @@
                     </div> -->
             </main>
 
-            <footer class="h-1/6 py-16 text-center text-sm text-black dark:text-white/70">
+            <footer class="h-1/6 py-16 text-center text-sm text-black">
                 Made with Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
             </footer>
         </div>

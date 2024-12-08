@@ -54,7 +54,7 @@
 
 </div>
 @else
-<h1 class="w-full p-10 text-2xl font-bold text-center">Você precisa estar logado para visualizar os Pokemons cadastrados.</h1>
+<h1 class="w-full p-10 text-2xl font-bold text-center">Você precisa estar logado para visualizar os Pokemon.</h1>
 @endcan
 
 

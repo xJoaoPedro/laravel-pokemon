@@ -973,6 +973,7 @@
                                     <h2 class="text-xl font-semibold text-black">Pokemon</h2>
 
                                     <p class="mt-4 text-sm/relaxed md:text-xs">
+                                        Pokémon é um mundo vasto e maravilhoso. Nosso sistema CRUD
                                         Pokémon is an exciting and vast world. Our CRUD system allows users to easily manage their Pokémon collection, simplifying the way to create, view details, update or delete their Pokemon from the system.
                                     </p>
                                 </div>
@@ -996,10 +997,11 @@
                                 </div>
 
                                 <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black">Coaches</h2>
+                                    <h2 class="text-xl font-semibold text-black">Treinadores</h2>
 
                                     <p class="mt-4 text-sm/relaxed md:text-xs">
-                                        Here you can create, read, udate and delete your Pokemon Coaches, Mastering strategies, building a strong team and defeating opponents to become a true Pokémon Champion.
+                                        Aqui você pode administrar seus treinadores Pokemon, aprimorar as estratégias e montar um time forte para se tornar o verdadeiro Campeão Pokemon.
+
                                     </p>
                                 </div>
 

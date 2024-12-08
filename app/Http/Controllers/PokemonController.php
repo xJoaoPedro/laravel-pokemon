@@ -19,8 +19,8 @@ class PokemonController extends Controller
     
     public function create()
     {
-        $user = Auth::user();
         Gate::authorize('create', Pokemon::class);
+        $user = Auth::user();
         
         $coaches = Coach::all();
         return view('pokemon.create', compact('coaches'));

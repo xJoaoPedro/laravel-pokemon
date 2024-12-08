@@ -923,7 +923,7 @@
                 Pokemon
             </a>
             <a href="{{ url('coaches') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
-                Coaches
+                Treinadores
             </a>
         </div>
     </div>
@@ -943,7 +943,7 @@
                         <a href="{{ url('profile') }}" class="flex items-center justify-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                             <div class="inline-flex items-center">
                             <svg viewBox="-6.2 -6.2 32.40 32.40" width="30px" height="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>profile [#1336]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-380.000000, -2159.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M334,2011 C337.785,2011 340.958,2013.214 341.784,2017 L326.216,2017 C327.042,2013.214 330.215,2011 334,2011 M330,2005 C330,2002.794 331.794,2001 334,2001 C336.206,2001 338,2002.794 338,2005 C338,2007.206 336.206,2009 334,2009 C331.794,2009 330,2007.206 330,2005 M337.758,2009.673 C339.124,2008.574 340,2006.89 340,2005 C340,2001.686 337.314,1999 334,1999 C330.686,1999 328,2001.686 328,2005 C328,2006.89 328.876,2008.574 330.242,2009.673 C326.583,2011.048 324,2014.445 324,2019 L344,2019 C344,2014.445 341.417,2011.048 337.758,2009.673" id="profile-[#1336]"> </path> </g> </g> </g> </g></svg>
-                                <p class="ml-2">Your profile</p>
+                                <p class="ml-2">Seu perfil</p>
                             </div>
                         </a>
                     </li>
@@ -954,7 +954,7 @@
                             <button type="submit" class="flex items-center justify-center w-full h-12 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                 <div class="inline-flex items-center">
                                     <svg viewBox="0 0 24 24" width="30px" height="30px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 5.25L9 4.5H18L18.75 5.25V18.75L18 19.5H9L8.25 18.75V16.5H9.75V18H17.25V6H9.75V7.5H8.25V5.25Z" fill="#000000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.06068 12.7499L14.25 12.7499L14.25 11.2499L7.06068 11.2499L8.78035 9.53027L7.71969 8.46961L4.18936 11.9999L7.71969 15.5303L8.78035 14.4696L7.06068 12.7499Z" fill="#000000"></path> </g></svg>
-                                    <p class="ml-2">Log out</p>
+                                    <p class="ml-2">Sair</p>
                                 </div>
                             </button>
                         </form>
@@ -968,7 +968,7 @@
                 Log in
             </a>
             <a href="{{ url('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
-                Register
+                Registrar
             </a>
         </div>
         @endif

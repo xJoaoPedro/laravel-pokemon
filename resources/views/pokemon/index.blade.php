@@ -19,10 +19,11 @@
 </div>
 @endcan
 
-<div class="w-full grid grid-cols-4 auto-rows-[200px] gap-10 mt-12 mx-12">
+@can('index', App\Models\Pokemon::class)
+<div class="w-full grid grid-cols-3 auto-rows-[200px] gap-10 mt-12 mx-12">
 
     @foreach($pokemon as $entity)
-    <div class="h-48 relative flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-md hover:bg-gray-100">
+    <div class="h-48 relative flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100">
         <div class="absolute top-4 right-5">
             <p class="mb-3 font-normal text-gray-700"> {{ $entity->id }} </p>
         </div>
@@ -52,5 +53,9 @@
     @endforeach
 
 </div>
+@else
+<h1 class="w-full p-10 text-2xl font-bold text-center">Você precisa estar logado para visualizar os Pokemons cadastrados.</h1>
+@endcan
+
 
 @endsection

@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('type');
-            $table->integer('power_points');
+            $table->integer('power');
             $table->string('image');
-            $table->foreignId('trainer_id')->references('id')->on('trainers');
+            $table->foreignId('coach_id')->references('id')->on('coaches');
             $table->timestamps();
         });
     }

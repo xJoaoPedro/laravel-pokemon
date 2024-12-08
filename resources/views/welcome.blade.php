@@ -908,7 +908,7 @@
 
 <body class="font-sans antialiased">
     <div class="bg-gray-50 text-black/50">
-        <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
+        <img id="background" class="absolute -left-20 top-0 max-w-[600px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
         <div class="relative h-screen flex flex-col items-center selection:bg-[#FF2D20] selection:text-white">
             <header class="w-3/4 h-1/6 grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                 <div class="flex lg:justify-center lg:col-start-2">
@@ -945,7 +945,7 @@
                     <a
                         href="{{ route('register') }}"
                         class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
-                        Register
+                        Registrar
                     </a>
                     @endif
                     @endauth
@@ -972,7 +972,7 @@
                                 <div class="pt-3 sm:pt-5 lg:pt-0">
                                     <h2 class="text-xl font-semibold text-black">Pokemon</h2>
 
-                                    <p class="mt-4 text-sm/relaxed">
+                                    <p class="mt-4 text-sm/relaxed md:text-xs">
                                         Pokémon is an exciting and vast world. Our CRUD system allows users to easily manage their Pokémon collection, simplifying the way to create, view details, update or delete their Pokemon from the system.
                                     </p>
                                 </div>
@@ -988,7 +988,7 @@
                     <div class="w-1/2 h-full p-5 flex flex-col justify-between">
                         <a
                             href="{{ url('coaches') }}"
-                            style="background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2024/01/_1-every-pok-mon-protagonist-s-official-name.jpg?q=70&fit=crop&w=1140&h=&dpr=1');"
+                            style="background-image: url('https://static.fandomspot.com/images/10/21066/00-featured-trainer-ash-ketchum-pokemon-anime-screenshot.jpg');"
                             class="flex h-3/5 items-end bg-cover bg-end rounded-lg bg-white shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none hover:ring-4 focus-visible:ring-[#FF2D20]">
                             <div class="relative p-6 h-full w-full flex items-center justify-between gap-6 rounded-lg bg-gradient-to-t from-gray-100 from-35% lg:items-end">
                                 <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
@@ -998,7 +998,7 @@
                                 <div class="pt-3 sm:pt-5">
                                     <h2 class="text-xl font-semibold text-black">Coaches</h2>
 
-                                    <p class="mt-4 text-sm/relaxed">
+                                    <p class="mt-4 text-sm/relaxed md:text-xs">
                                         Here you can create, read, udate and delete your Pokemon Coaches, Mastering strategies, building a strong team and defeating opponents to become a true Pokémon Champion.
                                     </p>
                                 </div>
@@ -1023,10 +1023,11 @@
                                 </div>
 
                                 <div class="pt-3 sm:pt-5 flex-grow">
-                                    <h2 class="text-xl font-semibold text-black">Profile</h2>
+                                    <h2 class="text-xl font-semibold text-black">Meu perfil</h2>
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Here you can view and edit your profile informations.
+                                    <p class="mt-4 text-sm/relaxed md:text-xs">
+                                        Visualize e edite as informações do seu perfil.
+                                        <!-- Here you can view and edit your profile informations. -->
                                     </p>
                                 </div>
 

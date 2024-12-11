@@ -904,77 +904,173 @@
     </style>
     @endif
 
+    <style>
+        [x-cloak] {
+            display: none;
+        }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
 </head>
 
 <body class="bg-gray-100 w-full h-screen relative flex flex-col">
 
-<nav class="flex items-center justify-between flex-wrap bg-sky-900 p-6">
+    <nav class="flex items-center justify-between flex-wrap bg-sky-900 p-6">
 
-    <div class="w-1/3 flex items-center text-white">
-    @yield('title_nav')
+        <div class="w-1/3 flex items-center text-white">
+            @yield('title_nav')
 
-    </div>
-
-    <div class="w-1/3 block flex items-center justify-center">
-        <div class="text-sm">
-            <a href="{{ url('pokemon') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
-                Pokemon
-            </a>
-            <a href="{{ url('coaches') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
-                Treinadores
-            </a>
         </div>
-    </div>
 
-    <div class="w-1/3 block flex items-center justify-end">
-        @if (auth()->check())
-        <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse relative" x-data="{ open: false }">
-            <button @click="open = !open" type="button" class="inline-flex items-center justify-center px-2 py-2 rounded-full cursor-pointer hover:bg-gray-100">
-                <img src="{{ url(auth()->user()->image) }}" alt="Profile Picture" class="w-12 h-12 rounded-full object-cover">
-            </button>
+        <div class="w-1/3 block flex items-center justify-center">
 
-            <!-- Dropdown -->
-            <div x-show="open" @click.outside="open = false" class="absolute right-0 top-12 w-48 bg-white rounded-lg shadow-lg z-10">
-                <p class="px-3 py-2">{{ auth()->user()->name }}</p>
-                <ul class="py-2 font-medium" role="none">
-                    <li class="h-12">
-                        <a href="{{ url('profile') }}" class="flex items-center justify-center block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                            <div class="inline-flex items-center">
-                            <svg viewBox="-6.2 -6.2 32.40 32.40" width="30px" height="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>profile [#1336]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-380.000000, -2159.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M334,2011 C337.785,2011 340.958,2013.214 341.784,2017 L326.216,2017 C327.042,2013.214 330.215,2011 334,2011 M330,2005 C330,2002.794 331.794,2001 334,2001 C336.206,2001 338,2002.794 338,2005 C338,2007.206 336.206,2009 334,2009 C331.794,2009 330,2007.206 330,2005 M337.758,2009.673 C339.124,2008.574 340,2006.89 340,2005 C340,2001.686 337.314,1999 334,1999 C330.686,1999 328,2001.686 328,2005 C328,2006.89 328.876,2008.574 330.242,2009.673 C326.583,2011.048 324,2014.445 324,2019 L344,2019 C344,2014.445 341.417,2011.048 337.758,2009.673" id="profile-[#1336]"> </path> </g> </g> </g> </g></svg>
-                                <p class="ml-2">Seu perfil</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="h-12">
-                        <form method="POST" action="{{ route('logout') }}" class="w-full h-12">
-                            @csrf
+            <a href="{{ url('pokemon') }}" title="Pokémon" class="flex size-12 mx-1 shrink-0 items-center justify-center rounded-full bg-[#F8F8F8]/10 sm:size-16 hover:opacity-65 transition-all">
 
-                            <button type="submit" class="flex items-center justify-center w-full h-12 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-371.587 -299.544 871.587 799.544"
+                    xmlns:bx="https://boxy-svg.com" width="50px" height="50px">
+                    <defs>
+                        <bx:export>
+                            <bx:file format="svg" path="pokedex.svg" />
+                            <bx:file format="html" path="pokedex.html" />
+                        </bx:export>
+                    </defs>
+                    <g>
+                        <ellipse style="fill: rgb(255, 255, 255);" cx="-63.871" cy="-182.33" rx="30.5" ry="30.5" />
+                        <ellipse style="fill: none; stroke-width: 3px; stroke: rgb(255, 255, 255);" cx="-63.9"
+                            cy="-182.3" rx="37.5" ry="37.5" />
+                        <ellipse style="fill: rgb(255, 255, 255);" cx="7" cy="-210" rx="12" ry="12" />
+                        <ellipse style="fill: rgb(255, 255, 255);" cx="43" cy="-210" rx="12" ry="12" />
+                        <path
+                            d="M 159.488 -110.262 C 180.268 -110.793 207.571 -109.791 219.867 -109.824 C 225.826 -109.84 231.655 -108.97 233.905 -106.199 C 236.013 -103.603 237.517 -101.641 237.437 -97.804 C 237.363 -94.221 238.609 250.093 236.498 251.864 C 235.967 252.31 233.566 258.469 228.608 261.037 C 220.367 261.288 -43.943 260.487 -49.053 261.027 C -53.429 258.613 -86.131 224.791 -90.239 219.081 C -91.905 214.424 -91.24 -76.043 -90.867 -90.219 C -90.742 -101.309 -87.758 -109.674 -79.063 -110.239 C -56.527 -111.702 141.841 -109.811 159.488 -110.262 Z"
+                            style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 4px;" />
+                    </g>
+                    <path style="fill: none; stroke: rgb(255, 255, 255); stroke-linejoin: round; stroke-width: 8px;"
+                        d="M -87.371 -235.83 H 234.193 A 25.716 25.716 0 0 1 259.909 -210.114 V 391.016 A 45.343 45.343 0 0 1 214.566 436.359 H -101.182 A 30.078 30.078 0 0 1 -131.26 406.281 V -191.941 A 43.889 43.889 0 0 1 -87.371 -235.83 Z"
+                        bx:shape="rect -131.26 -235.83 391.169 672.189 43.889 25.716 45.343 30.078 1@cbba7133" />
+                    <rect x="-68.447" y="-85.396" width="280.938" height="279.686" style="fill: rgb(255, 255, 255);" />
+                    <ellipse style="fill: rgb(255, 255, 255);" cx="-32.824" cy="228.82" rx="15" ry="15" />
+                    <path style="fill: none; stroke-width: 2px; stroke: rgb(255, 255, 255); stroke-linecap: round;"
+                        d="M 144.898 224.042 C 167.22 224.042 190.809 223.707 212.578 223.707" />
+                    <path style="fill: none; stroke-width: 2px; stroke: rgb(255, 255, 255); stroke-linecap: round;"
+                        d="M 144.9 233.488 C 167.222 233.488 190.811 233.153 212.58 233.153" />
+                    <g transform="matrix(1, 0, 0, 1, 16.370024, 11.408523)">
+                        <ellipse style="fill: rgb(255, 255, 255);" cx="-69.893" cy="297.449" rx="22" ry="22" />
+                    </g>
+                    <rect x="144.691" y="321.83" width="87" height="24"
+                        style="stroke: rgb(255, 255, 255); stroke-linecap: round; fill: rgb(255, 255, 255); stroke-linejoin: round;"
+                        rx="3.336" ry="3.336" />
+                    <rect x="177.441" y="290.2" width="24" height="87"
+                        style="fill: rgb(255, 255, 255); stroke-linecap: round; stroke: rgb(255, 255, 255); stroke-miterlimit: 7.04; stroke-linejoin: round;"
+                        rx="1.877" ry="1.877" />
+                    <g transform="matrix(1, 0, 0, 1, -47.400826, 97.577377)">
+                        <rect x="49.924" y="289.833" width="60.868" height="11.97"
+                            style="fill-opacity: 0.22; fill-rule: nonzero; stroke: rgb(255, 255, 255); stroke-width: 3px; fill: none;"
+                            rx="7.764" ry="7.764" />
+                        <rect x="-31.892" y="289.674" width="60.868" height="11.97"
+                            style="fill-opacity: 0.22; fill-rule: nonzero; stroke: rgb(255, 255, 255); stroke-width: 3px; fill: none;"
+                            rx="7.764" ry="7.764" />
+                    </g>
+                </svg>
+
+            </a>
+
+            <a href="{{ url('coaches') }}" title="Treinadores" class="flex size-12 mx-1 shrink-0 items-center justify-center rounded-full bg-[#F8F8F8]/10 sm:size-16 hover:opacity-65 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xmlns:bx="https://boxy-svg.com" width="40px" height="40px">
+                    <defs>
+                        <bx:export>
+                            <bx:file format="svg" path="Sem título.svg" />
+                            <bx:file format="html" path="Sem título.html" />
+                        </bx:export>
+                    </defs>
+                    <path style="fill: rgb(200, 200, 200);" d="M 421.705 333.054 L 346.274 353.484 C 346.274 353.484 369.846 355.342 397.191 366.486 C 397.191 366.486 440.38 379.918 496.011 366.915 C 496.011 366.915 466.02 342.341 421.705 333.054 Z" />
+                    <path style="stroke: rgb(255, 255, 255); stroke-width: 6px; fill: none;" d="M 400.862 302.503 C 400.862 302.503 337.761 267.118 191.828 331.529 C 170.433 338.931 57.616 375.072 3.978 333.983 C 3.978 333.983 -23.158 94.118 190.497 94.404 L 190.497 94.386 C 190.739 94.386 190.972 94.396 191.212 94.396 C 191.667 94.4 192.099 94.381 192.555 94.386 L 192.555 94.419 C 363.555 95.567 395.281 237.755 400.862 302.503 Z" />
+                    <g transform="matrix(1.276109, 0, 0, 1.256868, -85.257996, -41.33633)">
+                        <path d="M208.295,113.202l-3.802-4.525c-32.675,27.434-51.199,70.552-53.574,124.694 c-1.782,40.684,6.221,73.747,6.304,74.077l5.737-1.413C162.647,304.753,132.263,177.041,208.295,113.202z" />
+                        <path style="stroke-width: 3.94792px; stroke: rgb(255, 255, 255); fill: rgb(255, 255, 255);" d="M 287.666 135.08 C 259.027 112.864 231.759 107.281 230.612 107.055 C 230.612 107.055 210.916 105.994 203.23 110.961 C 132.619 156.598 139.148 295.957 155.293 307.14 C 174.116 320.178 350.968 266.104 350.968 266.104 C 346.701 196.297 314.075 155.567 287.666 135.08 Z" />
+                    </g>
+                    <path style="stroke: rgb(255, 255, 255); stroke-width: 5px; fill: rgb(255, 255, 255);" d="M 306.671 294.978 C 259.528 303.336 77.548 353.484 77.548 353.484 C 77.548 353.484 124.692 427.776 215.211 428.707 C 215.211 428.707 247.269 433.351 301.956 385.991 C 301.956 385.991 411.175 309.296 484.805 361.224 L 400.959 297.764 C 400.959 297.763 353.814 286.62 306.671 294.978 Z M 484.805 361.223 L 490.533 365.558 C 488.654 364.013 486.738 362.584 484.805 361.223 Z" />
+                    <path style="fill: rgb(255, 255, 255);" d="M 190.696 71.168 C 177.676 71.168 167.123 81.354 167.123 93.921 C 167.123 106.486 214.266 106.486 214.266 93.921 C 214.268 81.354 203.713 71.168 190.696 71.168 Z" />
+                    <g transform="matrix(0.95515, 0, 0, 1, 8.703419, 1.908997)">
+                        <ellipse style="stroke-dashoffset: 19px; stroke-miterlimit: 25.97; fill: rgb(12 74 110);" cx="227.453" cy="213.319" rx="58.011" ry="56.236" />
+                        <ellipse style="stroke-dashoffset: 19px; stroke-miterlimit: 25.97; fill: rgb(255, 255, 255);" cx="228.378" cy="211.297" rx="22.76" ry="22.508" />
+                        <ellipse style="stroke-dashoffset: 19px; stroke-miterlimit: 25.97; fill: rgb(12 74 110);" cx="228.024" cy="211.225" rx="14.79" ry="14.665" />
+                        <rect x="244.597" y="202.623" width="59.208" height="17.206" style="fill: rgb(255, 255, 255);" />
+                        <rect x="151.482" y="202.876" width="59.208" height="17.206" style="fill: rgb(255, 255, 255);" />
+                    </g>
+                </svg>
+            </a>
+
+        </div>
+
+        <div class="w-1/3 block flex items-center justify-end">
+            @if (auth()->check())
+            <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse relative" x-data="{ open: false }">
+                <button @click="open = !open" type="button" class="inline-flex items-center justify-center px-1 py-1 rounded-full cursor-pointer hover:bg-gray-100 transition-all">
+                    <img src="{{ url(auth()->user()->image) }}" alt="Profile Picture" class="w-12 h-12 rounded-full object-cover">
+                </button>
+
+                <!-- Dropdown -->
+                <div x-show="open" x-transition x-cloak @click.outside="open = false" class="absolute right-0 top-16 w-44 bg-white rounded-lg shadow-lg z-10">
+                    <p class="px-3 py-2">{{ auth()->user()->name }}</p>
+                    <ul class="pt-2 font-medium" role="none">
+                        <li class="h-12">
+                            <a href="{{ url('profile') }}" class="flex items-center justify-center block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">
                                 <div class="inline-flex items-center">
-                                    <svg viewBox="0 0 24 24" width="30px" height="30px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 5.25L9 4.5H18L18.75 5.25V18.75L18 19.5H9L8.25 18.75V16.5H9.75V18H17.25V6H9.75V7.5H8.25V5.25Z" fill="#000000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.06068 12.7499L14.25 12.7499L14.25 11.2499L7.06068 11.2499L8.78035 9.53027L7.71969 8.46961L4.18936 11.9999L7.71969 15.5303L8.78035 14.4696L7.06068 12.7499Z" fill="#000000"></path> </g></svg>
-                                    <p class="ml-2">Sair</p>
+                                    <svg viewBox="-6.2 -6.2 32.40 32.40" width="30px" height="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title>profile [#1336]</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <defs> </defs>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Dribbble-Light-Preview" transform="translate(-380.000000, -2159.000000)" fill="#000000">
+                                                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                        <path d="M334,2011 C337.785,2011 340.958,2013.214 341.784,2017 L326.216,2017 C327.042,2013.214 330.215,2011 334,2011 M330,2005 C330,2002.794 331.794,2001 334,2001 C336.206,2001 338,2002.794 338,2005 C338,2007.206 336.206,2009 334,2009 C331.794,2009 330,2007.206 330,2005 M337.758,2009.673 C339.124,2008.574 340,2006.89 340,2005 C340,2001.686 337.314,1999 334,1999 C330.686,1999 328,2001.686 328,2005 C328,2006.89 328.876,2008.574 330.242,2009.673 C326.583,2011.048 324,2014.445 324,2019 L344,2019 C344,2014.445 341.417,2011.048 337.758,2009.673" id="profile-[#1336]"> </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <p class="ml-2">Seu perfil</p>
                                 </div>
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        @else
-        <div class="text-sm">
-            <a href="{{ url('login') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
-                Log in
-            </a>
-            <a href="{{ url('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
-                Registrar
-            </a>
-        </div>
-        @endif
-    </div>
+                            </a>
+                        </li>
+                        <li class="h-12">
+                            <form method="POST" action="{{ route('logout') }}" class="w-full h-12">
+                                @csrf
 
-</nav>
+                                <button type="submit" class="flex items-center justify-center w-full h-12 block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">
+                                    <div class="inline-flex items-center">
+                                        <svg viewBox="0 0 24 24" width="30px" height="30px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 5.25L9 4.5H18L18.75 5.25V18.75L18 19.5H9L8.25 18.75V16.5H9.75V18H17.25V6H9.75V7.5H8.25V5.25Z" fill="#000000"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.06068 12.7499L14.25 12.7499L14.25 11.2499L7.06068 11.2499L8.78035 9.53027L7.71969 8.46961L4.18936 11.9999L7.71969 15.5303L8.78035 14.4696L7.06068 12.7499Z" fill="#000000"></path>
+                                            </g>
+                                        </svg>
+                                        <p class="ml-2">Sair</p>
+                                    </div>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @else
+            <div class="text-sm">
+                <a href="{{ url('login') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
+                    Log in
+                </a>
+                <a href="{{ url('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
+                    Registrar
+                </a>
+            </div>
+            @endif
+        </div>
+
+    </nav>
 
 
 

@@ -16,12 +16,12 @@ class PokemonController extends Controller
         $user = Auth::user();
         return view('pokemon.index', compact(['pokemon', 'user']));
     }
-    
+
     public function create()
     {
         Gate::authorize('create', Pokemon::class);
         $user = Auth::user();
-        
+
         $coaches = Coach::all();
         return view('pokemon.create', compact('coaches'));
     }
@@ -41,8 +41,8 @@ class PokemonController extends Controller
         $pokemon->name = $request->name;
         $pokemon->type = $request->type;
         $pokemon->power = $request->power;
-        $pokemon->coach_id = $request->coach_id;
         $pokemon->image = 'images/'.$imageName;
+        $pokemon->coach_id = $request->coach_id;
         $pokemon->save();
 
         return redirect('pokemon')->with('success', 'Pokemon created successfully.');

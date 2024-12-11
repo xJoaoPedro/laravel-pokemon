@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="public/assets/readme/readme.svg" width="600" alt="Laravel x Pokemon"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="assets/readme/readme.svg" width="600" alt="Laravel x Pokemon"></a></p>
 
 <p align="center">
 <a href="#port"><img src="https://img.shields.io/badge/Portugu%C3%AAs-008400" alt="link para documentação em portugues"></a> &nbsp
@@ -16,7 +16,7 @@ Criada durante a cadeira de _Programação Web_, a aplicação trata-se de um CR
 - **Treinador -** nome e imagem. 
 
 <div align="center">
-<img src="public/assets/readme/readme2.gif" alt="ash e pikachu caminhando" height="60">
+<img src="assets/readme/readme2.gif" alt="ash e pikachu caminhando" height="60">
 </div>
 
 ## Tecnologias usadas
@@ -30,7 +30,7 @@ O sistema foi desenvolvido utilizando o framework _[Laravel](https://laravel.com
 
 ## Autenticação e criação de perfil
 
-<img src="public/assets/readme/readme3.gif" width="70" align="right" alt="ash e pikachu">
+<img src="assets/readme/readme3.gif" width="70" align="right" alt="ash e pikachu">
 
 <p align="left">
 
@@ -41,7 +41,7 @@ Além do CRUD completo de ambas entidades, a aplicação ainda implementa funcio
 
 ## Por que Laravel?
 
-<img src="public/assets/readme/readme4.gif" width="70" align="left" alt="ash e pikachu">
+<img src="assets/readme/readme4.gif" width="70" align="left" alt="ash e pikachu">
 
 
 <p align="left"> 
@@ -53,7 +53,7 @@ O framework foi escolhido por oferecer diversas facilitações no desenvolviment
 
 <hr>
 <div align="center">
-<img src="public/assets/readme/readmeconutry.jpg" align="center" alt="metade bandeira do brasil e metade dos EUA">
+<img src="assets/readme/readmeconutry.jpg" align="center" alt="metade bandeira do brasil e metade dos EUA">
 </div>
 <hr>
 
@@ -67,7 +67,7 @@ Created during the _Web Programming_ course, the application is a thematic CRUD 
 - **Trainer -** name and image. 
 
 <div align="center">
-<img src="public/assets/readme/readme5.gif" alt="pikachu, charmander e squirtle caminhando" height="70">
+<img src="assets/readme/readme5.gif" alt="pikachu, charmander e squirtle caminhando" height="70">
 </div>
 
 ## Technologies used
@@ -81,7 +81,7 @@ The system was developed using the _[Laravel](https://laravel.com)_ framework, i
 
 ## Authentication and profile creation
 
-<img src="public/assets/readme/readme6.gif" height="75" align="right" alt="ash e pikachu">
+<img src="assets/readme/readme6.gif" height="75" align="right" alt="ash e pikachu">
 
 <p align="left">
 
@@ -94,7 +94,7 @@ In addition to the complete CRUD for both entities, the application also impleme
 
 ## Why Laravel?
 
-<img src="public/assets/readme/readme4.gif" width="70" align="left" alt="ash e pikachu">
+<img src="assets/readme/readme4.gif" width="70" align="left" alt="ash e pikachu">
 
 <p align="left"> 
 

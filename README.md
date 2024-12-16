@@ -21,24 +21,19 @@
 
 <p align="center">
 <a href="https://laravel.com/docs/11.x/installation">
-<img src="https://img.shields.io/badge/Laravel-11.*-FF2D20?logo=laravel&logoColor=FFF" alt="laravel 11.*"> 
-</a>
+<img src="https://img.shields.io/badge/Laravel-11.*-FF2D20?logo=laravel&logoColor=FFF" alt="laravel 11.*"></a>
 &nbsp
 <a href="https://www.php.net/downloads.php">
-<img src="https://img.shields.io/badge/PHP-8.2.*-474A8A?logo=php&logoColor=FFF" alt="php 8.2.*">
-</a>
+<img src="https://img.shields.io/badge/PHP-8.2.*-474A8A?logo=php&logoColor=FFF" alt="php 8.2.*"></a>
 &nbsp
 <a href="https://nodejs.org/pt">
-<img src="https://img.shields.io/badge/Node-20.17.*-3C873A?logo=node.js&logoColor=FFF" alt="node 20.17.*">
-</a>
+<img src="https://img.shields.io/badge/Node-20.17.*-3C873A?logo=node.js&logoColor=FFF" alt="node 20.17.*"></a>
 &nbsp
 <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">
-<img src="https://img.shields.io/badge/NPM-10.8.*-CC3534?logo=npm&logoColor=FFF" alt="npm 10.8.*">
-</a>
+<img src="https://img.shields.io/badge/NPM-10.8.*-CC3534?logo=npm&logoColor=FFF" alt="npm 10.8.*"></a>
 &nbsp
 <a href="https://getcomposer.org/download/">
-<img src="https://img.shields.io/badge/Composer-2.7.*-87532d?logo=composer&logoColor=FFF" alt="composer 2.7.*">
-</a>
+<img src="https://img.shields.io/badge/Composer-2.7.*-87532d?logo=composer&logoColor=FFF" alt="composer 2.7.*"></a>
 </p>
 
 ### Instalação e teste
@@ -126,24 +121,19 @@ O framework foi escolhido por oferecer diversas facilitações no desenvolviment
 
 <p align="center">
 <a href="https://laravel.com/docs/11.x/installation">
-<img src="https://img.shields.io/badge/Laravel-11.*-FF2D20?logo=laravel&logoColor=FFF" alt="laravel 11.*"> 
-</a>
+<img src="https://img.shields.io/badge/Laravel-11.*-FF2D20?logo=laravel&logoColor=FFF" alt="laravel 11.*"></a>
 &nbsp
 <a href="https://www.php.net/downloads.php">
-<img src="https://img.shields.io/badge/PHP-8.2.*-474A8A?logo=php&logoColor=FFF" alt="php 8.2.*">
-</a>
+<img src="https://img.shields.io/badge/PHP-8.2.*-474A8A?logo=php&logoColor=FFF" alt="php 8.2.*"></a>
 &nbsp
 <a href="https://nodejs.org/pt">
-<img src="https://img.shields.io/badge/Node-20.17.*-3C873A?logo=node.js&logoColor=FFF" alt="node 20.17.*">
-</a>
+<img src="https://img.shields.io/badge/Node-20.17.*-3C873A?logo=node.js&logoColor=FFF" alt="node 20.17.*"></a>
 &nbsp
 <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">
-<img src="https://img.shields.io/badge/NPM-10.8.*-CC3534?logo=npm&logoColor=FFF" alt="npm 10.8.*">
-</a>
+<img src="https://img.shields.io/badge/NPM-10.8.*-CC3534?logo=npm&logoColor=FFF" alt="npm 10.8.*"></a>
 &nbsp
 <a href="https://getcomposer.org/download/">
-<img src="https://img.shields.io/badge/Composer-2.7.*-87532d?logo=composer&logoColor=FFF" alt="composer 2.7.*">
-</a>
+<img src="https://img.shields.io/badge/Composer-2.7.*-87532d?logo=composer&logoColor=FFF" alt="composer 2.7.*"></a>
 </p>
 
 ### Instalation and test

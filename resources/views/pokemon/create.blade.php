@@ -1,9 +1,9 @@
 @extends('layouts.base')
 
-@section('title', 'Pokemon - Criar')
+@section('title', 'Pokémon - Criar')
 
 @section('title_nav')
-<a href="{{ url('/coaches') }}" class="flex items-center hover:opacity-65 transition-all">
+<a href="{{ url('/pokemon') }}" class="flex items-center hover:opacity-65 transition-all">
     <svg height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.985 511.985" xml:space="preserve" fill="#000000">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

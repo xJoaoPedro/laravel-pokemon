@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'Pokemon - Editar')
+@section('title', 'Pokémon - Editar')
 
 @section('title_nav')
 <a href="{{ url('/pokemon') }}" class="flex items-center hover:opacity-65 transition-all">

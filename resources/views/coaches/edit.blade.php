@@ -24,7 +24,7 @@
 @endsection
 
 @section('content')
-<div class="flex h-screen w-full">
+<div class="flex h-full w-full">
 
 
     <div class="w-1/3">

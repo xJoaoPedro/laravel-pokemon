@@ -1,7 +1,7 @@
 <x-guest-layout>
     <p class="text-center">
         <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-            {{ __('Já possui conta?') }}
+            {{ __('Already have an account?') }}
         </a>
     </p>
     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
@@ -9,7 +9,7 @@
 
         <!-- Name -->
         <div>
-            <x-input-label for="name" :value="__('Nome')" />
+            <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
@@ -23,7 +23,7 @@
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Senha')" />
+            <x-input-label for="password" :value="__('Password')" />
 
             <x-text-input id="password" class="block mt-1 w-full"
                 type="password"
@@ -35,7 +35,7 @@
 
         <!-- Confirm Password -->
         <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirmar senha')" />
+            <x-input-label for="password_confirmation" :value="__('Confirm password')" />
 
             <x-text-input id="password_confirmation" class="block mt-1 w-full"
                 type="password"
@@ -45,7 +45,7 @@
         </div>
 
         <div class="mt-4">
-            <x-input-label for="image" :value="__('Foto de perfil')" />
+            <x-input-label for="image" :value="__('Profile picture')" />
             <x-text-input id="image" class="block mt-1 w-full" type="file" name="image" :value="old('Image')" autocomplete="username" />
             <x-input-error :messages="$errors->get('image')" class="mt-2" />
         </div>

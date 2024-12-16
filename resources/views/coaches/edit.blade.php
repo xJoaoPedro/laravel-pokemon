@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', 'Treinadores - Editar')
+@section('title', 'Trainers - Edit')
 @section('title_nav')
 <a href="{{ url('/coaches') }}" class="flex items-center hover:opacity-65 transition-all">
     <svg height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496.182 496.182">
@@ -19,7 +19,7 @@
             <rect x="151.482" y="202.876" width="59.208" height="17.206" style="fill: rgb(255, 255, 255);"></rect>
         </g>
     </svg>
-    <span class="font-semibold text-xl tracking-tight ml-5">Editar treinador</span>
+    <span class="font-semibold text-xl tracking-tight ml-5">Edit trainer</span>
 </a>
 @endsection
 
@@ -58,15 +58,15 @@
                         </svg>
                     </span>
 
-                    <span class="text-sm trxt-black font-medium transition-all group-hover:ms-4 group-hover:text-white"> Voltar </span>
+                    <span class="text-sm trxt-black font-medium transition-all group-hover:ms-4 group-hover:text-white"> Back </span>
                 </a>
             </div>
             <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                Edite e atualize seu treinador 🧑
+                Edit and update your trainer 🧑
             </h1>
 
             <p class="mt-4 leading-relaxed text-gray-500">
-                Ops! Aqui você pode editar e atualizar seu treinador caso tenha feito algo errado.
+                Oops! Here you can edit and update your trainer in case you made something wrong.
             </p>
 
             <form action="{{ url('coaches/' . $coach->id) }}" method="POST" enctype="multipart/form-data" class="mx-auto mt-10 w-5/6">
@@ -75,13 +75,13 @@
 
                 <div class="relative z-0 w-full mb-8 group">
                     <input value="{{ $coach->name }}" type="text" name="name" id="name" maxlength="13" class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-600 peer" placeholder=" " required />
-                    <label for="name" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nome</label>
+                    <label for="name" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
                 </div>
                 <div class="relative z-0 w-full h-32 mb-2 group flex">
                     <img src="{{ asset($coach->image) }}" alt="{{ $coach->name }}" class="object-cover h-16 pr-2">
                     <div class="relative z-0 w-full h-48 mb-8 group">
                         <input type="file" name="image" id="image" class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-600 peer" placeholder=" " />
-                        <label for="image" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Foto</label>
+                        <label for="image" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Photo</label>
 
                     </div>
                 </div>
@@ -92,7 +92,7 @@
 
                         <span
                             class="relative text-sm font-medium text-black transition-colors group-hover:text-white">
-                            Atualizar Treinador
+                            Update trainer
                         </span>
                     </button>
                 </div>

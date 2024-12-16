@@ -974,7 +974,7 @@
 
             </a>
 
-            <a href="{{ url('coaches') }}" title="Treinadores" class="flex size-12 mx-1 shrink-0 items-center justify-center rounded-full bg-[#F8F8F8]/10 sm:size-16 hover:opacity-65 transition-all">
+            <a href="{{ url('coaches') }}" title="Trainers" class="flex size-12 mx-1 shrink-0 items-center justify-center rounded-full bg-[#F8F8F8]/10 sm:size-16 hover:opacity-65 transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xmlns:bx="https://boxy-svg.com" width="40px" height="40px">
                     <defs>
                         <bx:export>
@@ -1032,7 +1032,7 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    <p class="ml-2">Seu perfil</p>
+                                    <p class="ml-2">Your profile</p>
                                 </div>
                             </a>
                         </li>
@@ -1050,7 +1050,7 @@
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.06068 12.7499L14.25 12.7499L14.25 11.2499L7.06068 11.2499L8.78035 9.53027L7.71969 8.46961L4.18936 11.9999L7.71969 15.5303L8.78035 14.4696L7.06068 12.7499Z" fill="#000000"></path>
                                             </g>
                                         </svg>
-                                        <p class="ml-2">Sair</p>
+                                        <p class="ml-2">Exit</p>
                                     </div>
                                 </button>
                             </form>
@@ -1064,7 +1064,7 @@
                     Log in
                 </a>
                 <a href="{{ url('register') }}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
-                    Registrar
+                    Register
                 </a>
             </div>
             @endif

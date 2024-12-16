@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', 'Treinadores - Criar')
+@section('title', 'Trainers - Create')
 @section('title_nav')
 <a href="{{ url('/coaches') }}" class="flex items-center hover:opacity-65 transition-all">
     <svg height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496.182 496.182">
@@ -19,7 +19,7 @@
             <rect x="151.482" y="202.876" width="59.208" height="17.206" style="fill: rgb(255, 255, 255);"></rect>
         </g>
     </svg>
-    <span class="font-semibold text-xl tracking-tight ml-5">Criar treinador</span>
+    <span class="font-semibold text-xl tracking-tight ml-5">Create trainer</span>
 </a>
 @endsection
 
@@ -47,27 +47,27 @@
                     </svg>
                 </span>
 
-                <span class="text-sm font-bold uppercase tracking-widest text-black transition-all group-hover:ms-4 group-hover:text-white"> Voltar </span>
+                <span class="text-sm font-bold uppercase tracking-widest text-black transition-all group-hover:ms-4 group-hover:text-white"> Back </span>
             </a>
         </div>
         <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-            Crie o seu treinador! 🧑
+            Create your trainer! 🧑
         </h1>
 
         <p class="mt-4 leading-relaxed text-gray-500">
-            Aqui você pode criar seu treinador, dar a ele um nome e foto e 'temos que pegar'!
-        </p>
+            Here you can create your trainer, give him a name and photo and Gotta catch'em all!
+             </p>
 
         <form action="{{ url('coaches') }}" method="POST" enctype="multipart/form-data" class="mx-auto mt-10 w-5/6">
             @csrf
 
             <div class="relative z-0 w-full mb-8 group">
                 <input type="text" name="name" id="name" maxlength="13" class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-600 peer" placeholder=" " required />
-                <label for="name" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nome</label>
+                <label for="name" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
             </div>
             <div class="relative z-0 w-full mb-8 group">
                 <input type="file" name="image" id="image" class="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-600 peer" placeholder=" " required />
-                <label for="image" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Foto </label>
+                <label for="image" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Photo </label>
             </div>
 
             <div class="text-right mt-10">
@@ -77,7 +77,7 @@
 
                     <span
                         class="relative text-sm font-bold uppercase tracking-widest text-black transition-colors group-hover:text-white">
-                        Criar Treinador
+                        Create trainer
                     </span>
                 </button>
             </div>

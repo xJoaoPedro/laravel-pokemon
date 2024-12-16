@@ -932,7 +932,7 @@
                     <a
                         href="{{ url('/profile') }}"
                         class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
-                        Seu perfil
+                        Your profile
                     </a>
                     @else
                     <a
@@ -945,7 +945,7 @@
                     <a
                         href="{{ route('register') }}"
                         class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
-                        Registrar
+                        Register
                     </a>
                     @endif
                     @endauth
@@ -1014,10 +1014,9 @@
                                 </div>
 
                                 <div class="pt-3 sm:pt-5 lg:pt-0">
-                                    <h2 class="text-xl font-semibold text-black">Pokemon</h2>
+                                    <h2 class="text-xl font-semibold text-black">Pokémon</h2>
 
                                     <p class="mt-4 text-sm/relaxed md:text-xs">
-                                        Pokémon é um mundo vasto e maravilhoso. Nosso sistema CRUD
                                         Pokémon is an exciting and vast world. Our CRUD system allows users to easily manage their Pokémon collection, simplifying the way to create, view details, update or delete their Pokemon from the system.
                                     </p>
                                 </div>
@@ -1063,11 +1062,10 @@
                                 </div>
 
                                 <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black">Treinadores</h2>
+                                    <h2 class="text-xl font-semibold text-black">Trainers</h2>
 
                                     <p class="mt-4 text-sm/relaxed md:text-xs">
-                                        Aqui você pode administrar seus treinadores Pokemon, aprimorar as estratégias e montar um time forte para se tornar o verdadeiro Campeão Pokemon.
-
+                                        Here you can create, read, udate and delete your Pokemon Coaches, Mastering strategies, building a strong team and defeating opponents to become a true Pokémon Champion.
                                     </p>
                                 </div>
 
@@ -1106,10 +1104,10 @@
                                 </div>
 
                                 <div class="pt-3 sm:pt-5 flex-grow">
-                                    <h2 class="text-xl font-semibold text-black">Meu perfil</h2>
+                                    <h2 class="text-xl font-semibold text-black">Your profile</h2>
 
                                     <p class="mt-4 text-sm/relaxed md:text-xs">
-                                        Visualize e edite as informações do seu perfil.
+                                        Here you can view and edit your profile informations.
                                     </p>
                                 </div>
 
@@ -1123,7 +1121,7 @@
             </main>
 
             <footer class="h-1/6 py-16 text-center text-sm text-black">
-                Feito com Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                Made with Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
             </footer>
         </div>
     </div>

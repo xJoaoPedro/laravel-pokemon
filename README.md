@@ -6,7 +6,53 @@
 </p>
 
 
+
+
 <div id="port">
+<br>
+
+# Requisitos e instalação
+
+<p align="center">
+<a href="https://github.com/xJoaoPedro/laravel-pokemon/tree/pt-br"><img src="https://img.shields.io/badge/Ultimo%20release-008400" alt="link para branch em portugues"></a>
+</p>
+
+### Requisitos
+
+<p align="center">
+<img src="https://img.shields.io/badge/Laravel-11.*-FF2D20?logo=laravel&logoColor=FFF" alt="laravel 11.*"> 
+&nbsp
+<img src="https://img.shields.io/badge/PHP-8.2.*-474A8A?logo=php&logoColor=FFF" alt="php 8.2.*">
+&nbsp
+<img src="https://img.shields.io/badge/Node-20.17.*-3C873A?logo=node.js&logoColor=FFF" alt="node 20.17.*">
+&nbsp
+<img src="https://img.shields.io/badge/NPM-10.8.*-CC3534?logo=npm&logoColor=FFF" alt="npm 10.8.*">
+&nbsp
+<img src="https://img.shields.io/badge/Composer-2.7.*-87532d?logo=composer&logoColor=FFF" alt="composer 2.7.*">
+</p>
+
+### Instalação e teste
+
+Após clonar o repositório e certificar que todos os programas solicitados estão instalados, você deve alterar o nome do arquivo `.env.example` para `.env` e rodar os seguintes comandos no seu terminal (preferência git bash):
+
+<img src="assets/readme/readme1-1.gif" width="80" align="right" alt="jolteon">
+
+```
+npm install
+composer install
+php artisan storage:link
+php artisan key:generate
+php artisan migrate
+```
+
+Agora com o projeto configurado, basta rodar os seguintes comandos:
+```
+npm run build
+php artisan serve
+```
+
+E pronto! basta acessar seu `localhost` para testar o projeto!
+
 <br>
 
 # Sobre o projeto
@@ -58,6 +104,51 @@ O framework foi escolhido por oferecer diversas facilitações no desenvolviment
 <hr>
 
 <div id="eng">
+<br>
+
+# Requirements and instalation
+
+<p align="center">
+<a href="https://github.com/xJoaoPedro/laravel-pokemon/tree/en-us"><img src="https://img.shields.io/badge/Latest%20release-0A3161" alt="Total Downloads"></a>
+</p>
+
+### Requirements
+
+<p align="center">
+<img src="https://img.shields.io/badge/Laravel-11.*-FF2D20?logo=laravel&logoColor=FFF" alt="laravel 11.*"> 
+&nbsp
+<img src="https://img.shields.io/badge/PHP-8.2.*-474A8A?logo=php&logoColor=FFF" alt="php 8.2.*">
+&nbsp
+<img src="https://img.shields.io/badge/Node-20.17.*-3C873A?logo=node.js&logoColor=FFF" alt="node 20.17.*">
+&nbsp
+<img src="https://img.shields.io/badge/NPM-10.8.*-CC3534?logo=npm&logoColor=FFF" alt="npm 10.8.*">
+&nbsp
+<img src="https://img.shields.io/badge/Composer-2.7.*-87532d?logo=composer&logoColor=FFF" alt="composer 2.7.*">
+</p>
+
+### Instalation and test
+
+
+After cloning the repository and ensuring that all required programs are installed, you should rename the `.env.example` file to `.env` and run the following commands in your terminal (preferably Git Bash):
+
+<img src="assets/readme/readme1-2.gif" width="80" align="right" alt="meow ">
+
+```
+npm install
+composer install
+php artisan storage:link
+php artisan key:generate
+php artisan migrate
+```
+
+Now that the project is configured, simply run the following commands:
+```
+npm run build
+php artisan serve
+```
+
+And that's it! Just access your `localhost` to test the project!
+
 <br>
 
 # About the project
